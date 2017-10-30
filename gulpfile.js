@@ -20,7 +20,7 @@ gulp.task('copy', function() {
 // Default task
 gulp.task('default', ['copy']);
 
-// Configure the browserSync task
+
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
@@ -29,9 +29,9 @@ gulp.task('browserSync', function() {
   })
 })
 
-// Dev task with browserSync
+
 gulp.task('dev', ['browserSync'], function() {
-  // Reloads the browser whenever HTML or CSS files change
+  
   gulp.watch('css/*.css', browserSync.reload);
   gulp.watch('*.html', browserSync.reload);
 });
